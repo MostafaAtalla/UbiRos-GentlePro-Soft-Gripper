@@ -55,40 +55,43 @@ if __name__=="__main__":
 
                 all_fingers=p_increment+all_fingers_old
                 pub.publish(all_fingers)
+                print 'Current close percentage is', all_fingers, '%'
 
             else:
                 print('Max Storke has been acheived')
-                status = (status + 1) % 15
+            status = (status + 1) % 15
 
         elif (key=='s'):
             if (all_fingers > 0):
                 all_fingers=n_increment+all_fingers_old
                 pub.publish(all_fingers)
+                print 'Current close percentage is',all_fingers, '%'
 
             else:
                 print('Min Storke has been acheived')
-                status = (status + 1) % 15
+            status = (status + 1) % 15
 
         elif (key == 'a'):
             for i in range(all_fingers_old,101):
                 all_fingers=i
                 pub.publish(all_fingers)
                 time.sleep(0.01)
-
+                print 'Current close percentage is', all_fingers, '%'
+            print(msg)
 
         elif (key == 'z'):
             for i in range(all_fingers_old,-1,-1):
                 all_fingers=i
                 pub.publish(all_fingers)
                 time.sleep(0.01)
-
-
+                print 'Current close percentage is', all_fingers, '%'
+            print(msg)
 
         else:
             print('Enter the proper key')
             status = (status + 1) % 15
 
-        if (status == 14):
+        if (status == 10):
             print(msg)
 
 
