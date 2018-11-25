@@ -25,7 +25,9 @@ Before step 4, make sure that you have connected the soft gripper to the power s
   B - Through running the nodes individually
  
   $ roscore
+ 
   $ rosrun rosserial_python serial_node.py /dev/ttyUSB*
+  
   $ rosrun gentlepro_soft_gripper all_fingers_control.py 
   
   You can now use the stated keyboard buttons to control the Ubiros GentlePro soft gripper
