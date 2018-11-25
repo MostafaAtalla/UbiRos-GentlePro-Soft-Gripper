@@ -1,0 +1,7 @@
+
+<launch>
+    <node pkg ="rosserial_python" type="serial_node.py" name="serial_node"  output="screen">
+    </node>
+    <node pkg ="gentlepro_soft_gripper" type="all_fingers_control.py" name="all_fingers_control"  output="screen">
+    </node>
+</launch>
